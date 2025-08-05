@@ -1,22 +1,19 @@
-# 🤖 Proyecto Django Robótica 🤖
+🤖 Proyecto Django: Gestión de Robótica Inteligente 🤖
+📄 Descripción General
+Este proyecto es una aplicación web desarrollada con Django que permite gestionar de forma eficiente robots, sensores y tareas automatizadas.
+Ofrece una interfaz intuitiva y funcional para:
 
-## 📄 Descripción
+🔧 Crear y visualizar robots.
 
-Este proyecto es una aplicación web básica desarrollada con Django para gestionar robots, sensores y tareas asociadas. Permite crear y buscar robots, asociar sensores y tareas a cada robot, y visualizar sus detalles fácilmente a través de una interfaz sencilla y funcional.
+📡 Asociar sensores y tareas a cada robot.
 
----
+🔍 Buscar y filtrar robots según diferentes criterios.
 
-## 🛠️ Requisitos
+📊 Monitorear la actividad y los componentes de forma clara y ordenada.
 
-- Python 3.8+
-- Django 3.2+ (recomendado instalar última versión estable)
+Ideal para proyectos educativos, laboratorios de IA, automatización o robótica experimental.
 
----
+🛠️ Requisitos Técnicos
+🐍 Python 3.8 o superior
 
-## 🚀 Instalación y Configuración
-
-1. **Clonar el repositorio o descargar el código**
-
-```bash
-git clone <tu-repo-url>
-cd robotica_project
+🌐 Django 3.2+ (se recomienda usar la versión más reciente disponible)
