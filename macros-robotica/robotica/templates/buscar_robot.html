@@ -1,0 +1,41 @@
+{% extends "base.html" %}
+{% block title %}Buscar Robot{% endblock %}
+{% block content %}
+<h2>Buscar Robots</h2>
+<form method="get">
+    {{ form.as_p }}
+    <button type="submit">Buscar</button>
+</form>
+
+{% if robots is not None %}
+    <h3>Resultados:</h3>
+    {% if robots %}
+        <ul>
+            {% for robot in robots %}
+                <li>
+                    <strong>{{ robot.nombre }}</strong>: {{ robot.descripcion|default:"Sin descripción" }}
+                    <br>
+                    <em>Sensores:</em>
+                    <ul>
+                        {% for sensor in robot.sensores.all %}
+                            <li>{{ sensor.tipo }} - {{ sensor.descripcion|default:"Sin descripción" }}</li>
+                        {% empty %}
+                            <li>No tiene sensores</li>
+                        {% endfor %}
+                    </ul>
+                    <em>Tareas:</em>
+                    <ul>
+                        {% for tarea in robot.tareas.all %}
+                            <li>{{ tarea.nombre }} - {{ tarea.descripcion|default:"Sin descripción" }}</li>
+                        {% empty %}
+                            <li>No tiene tareas</li>
+                        {% endfor %}
+                    </ul>
+                </li>
+            {% endfor %}
+        </ul>
+    {% else %}
+        <p>No se encontraron robots con ese nombre.</p>
+    {% endif %}
+{% endif %}
+{% endblock %}

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <title>{% block title %}Robótica{% endblock %}</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 20px; background: #f0f0f0; }
+        nav a { margin-right: 10px; }
+        .container { background: white; padding: 20px; border-radius: 6px; max-width: 800px; margin: auto; }
+    </style>
+</head>
+<body>
+    <nav>
+        <a href="{% url 'index' %}">Inicio</a>
+        <a href="{% url 'crear_robot' %}">Crear Robot</a>
+        <a href="{% url 'crear_sensor' %}">Crear Sensor</a>
+        <a href="{% url 'crear_tarea' %}">Crear Tarea</a>
+        <a href="{% url 'buscar_robot' %}">Buscar Robot</a>
+    </nav>
+    <hr>
+    <div class="container">
+        {% block content %}{% endblock %}
+    </div>
+</body>
+</html>
